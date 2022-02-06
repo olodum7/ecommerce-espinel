@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 import SideBarMobileNav from "./SideBarMobileNav";
 import TopBar from "./TopBar";
 
-function Navbar() {
+function Navbar({agregarCarrito}) {
   return (
     <>
       <div class="overlay"></div>
@@ -32,7 +32,7 @@ function Navbar() {
 
           <ul className="navbar-nav ml-auto d-block d-md-none">
             <li className="nav-item">
-              <CartWidget />
+              <CartWidget agregarCarrito={agregarCarrito}/>
             </li>
           </ul>
 
@@ -51,7 +51,7 @@ function Navbar() {
 
             <ul className="navbar-nav">
               <li className="nav-item">
-                <CartWidget />
+                <CartWidget agregarCarrito={agregarCarrito}/>
               </li>
               <li className="nav-item ml-md-3">
                 <LogInButton />

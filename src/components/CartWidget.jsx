@@ -1,10 +1,10 @@
 import React from "react";
 
-const CartWidget = () => {
+const CartWidget = ({agregarCarrito}) => {
   return (
     <a className="btn btn-link" href=" ">
       <i className="bx bxs-cart icon-single"></i>{" "}
-      <span className="badge badge-danger">3</span>
+      <span className="badge badge-danger">{agregarCarrito}</span>
     </a>
   );
 };
