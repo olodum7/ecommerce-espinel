@@ -2,7 +2,7 @@ import React from "react";
 
 const Item = ({ item }) => {
   return (
-    <div className="col-6 col-md-3 text-left">
+    <div className="col-6 col-md-3 text-left mb-3">
       <figure>
         <div className="mb-2" style={{ height: "300px", overflow: "hidden" }}>
           <img src={item.pictureURL} className="w-100 mb-2" />
