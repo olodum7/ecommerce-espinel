@@ -11,7 +11,7 @@ const SearchBar = () => {
                 className="form-control"
                 type="search"
                 placeholder="Buscar productos..."
-                ariaLabel="Search"
+                aria-label="Search"
               />
               <button className="btn btn-success" type="submit">
                 <i className="bx bx-search"></i>

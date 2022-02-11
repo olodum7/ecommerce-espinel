@@ -33,12 +33,12 @@ const NavBarMenu = () => {
                 id="navbarDropdown"
                 role="button"
                 data-toggle="dropdown"
-                ariaHaspopup="true"
-                ariaExpanded="false"
+                aria-haspopup="true"
+                aria-expanded="false"
               >
                 Categoría #3
               </a>
-              <div className="dropdown-menu" ariaLabelledby="navbarDropdown">
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a className="dropdown-item" href=" ">
                   Subcategoría #1
                 </a>

@@ -2,25 +2,25 @@ import React from "react";
 
 const SocialIconsBar = () => {
   return (
-    <ul class="social-icons">
+    <ul className="social-icons">
       <li>
         <a href="#" target="_blank" title="">
-          <i class="bx bxl-facebook-square"></i>
+          <i className="bx bxl-facebook-square"></i>
         </a>
       </li>
       <li>
         <a href="#" target="_blank" title="">
-          <i class="bx bxl-twitter"></i>
+          <i className="bx bxl-twitter"></i>
         </a>
       </li>
       <li>
         <a href="#" target="_blank" title="">
-          <i class="bx bxl-linkedin"></i>
+          <i className="bx bxl-linkedin"></i>
         </a>
       </li>
       <li>
         <a href="#" target="_blank" title="">
-          <i class="bx bxl-instagram"></i>
+          <i className="bx bxl-instagram"></i>
         </a>
       </li>
     </ul>

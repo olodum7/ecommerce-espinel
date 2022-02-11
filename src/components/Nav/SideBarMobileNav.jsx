@@ -1,6 +1,6 @@
 import React from "react";
-import LogInButton from "./LogInButton";
-import SocialIconsBar from "./SocialIconsBar";
+import LogInButton from "../UI/LogInButton";
+import SocialIconsBar from "../SocialIconsBar/SocialIconsBar";
 
 const SideBarMobileNav = () => {
   return (
@@ -49,8 +49,8 @@ const SideBarMobileNav = () => {
         <li>
           <a
             href="pageSubmenu"
-            dataToggle="collapse"
-            ariaExpanded="false"
+            data-toggle="collapse"
+            aria-expanded="false"
             className="dropdown-toggle"
           >
             <i className="bx bx-help-circle mr-3"></i>

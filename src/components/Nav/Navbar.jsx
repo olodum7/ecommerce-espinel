@@ -1,15 +1,15 @@
 import React from "react";
-import CartWidget from "./CartWidget";
-import LogInButton from "./LogInButton";
+import CartWidget from "../UI/CartWidget";
+import LogInButton from "../UI/LogInButton";
 import NavBarMenu from "./NavBarMenu";
-import SearchBar from "./SearchBar";
+import SearchBar from "../UI/SearchBar";
 import SideBarMobileNav from "./SideBarMobileNav";
-import TopBar from "./TopBar";
+import TopBar from "../TopBar/TopBar";
 
 function Navbar({agregarCarrito}) {
   return (
     <>
-      <div class="overlay"></div>
+      <div className="overlay"></div>
 
       <TopBar />
 
@@ -42,7 +42,7 @@ function Navbar({agregarCarrito}) {
                 className="form-control"
                 type="search"
                 placeholder="Buscar productos..."
-                ariaLabel="Search"
+                aria-label="Search"
               />
               <button className="btn btn-success my-2 my-sm-0" type="submit">
                 <i className="bx bx-search"></i>

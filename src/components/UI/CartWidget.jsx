@@ -1,6 +1,7 @@
 import React from "react";
 
 const CartWidget = ({agregarCarrito}) => {
+
   return (
     <a className="btn btn-link" href=" ">
       <i className="bx bxs-cart icon-single"></i>{" "}
