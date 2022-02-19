@@ -1,6 +1,7 @@
 import React from "react";
 import LogInButton from "../UI/LogInButton";
 import SocialIconsBar from "../SocialIconsBar/SocialIconsBar";
+import { NavLink } from "react-router-dom";
 
 const SideBarMobileNav = () => {
   return (
@@ -27,24 +28,24 @@ const SideBarMobileNav = () => {
 
       <ul className="list-unstyled components links">
         <li className="active">
-          <a href=" ">
+          <NavLink to={"/"}>
             <i className="bx bx-home mr-3"></i> Home
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href=" ">
+          <NavLink to={"/category/destacados"}>
             <i className="bx bx-carousel mr-3"></i> Destacados
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href=" ">
-            <i className="bx bx-book-open mr-3"></i> Categoría #1
-          </a>
+          <NavLink to={"/category/aventuras"}>
+            <i className="bx bx-book-open mr-3"></i> Aventuras
+          </NavLink>
         </li>
         <li>
-          <a href=" ">
-            <i className="bx bx-crown mr-3"></i> Categoría #2
-          </a>
+          <NavLink to={"/category/ciudades"}>
+            <i className="bx bx-crown mr-3"></i> Ciudades
+          </NavLink>
         </li>
         <li>
           <a
@@ -69,9 +70,9 @@ const SideBarMobileNav = () => {
           </ul>
         </li>
         <li>
-          <a href=" ">
+          <NavLink to={"/contacto"}>
             <i className="bx bx-phone mr-3"></i> Contacto
-          </a>
+          </NavLink>
         </li>
       </ul>
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const NavBarMenu = () => {
   return (
@@ -6,54 +7,30 @@ const NavBarMenu = () => {
       <div className="container">
         <div className="collapse navbar-collapse" id="navbar">
           <ul className="navbar-nav mx-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href=" ">
+            <li className="nav-item">
+              <NavLink className="nav-link" activeClassName="active" to={"/"}>
                 Home <span className="sr-only">(current)</span>
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href=" ">
+              <NavLink className="nav-link" activeClassName="active" to={"/category/destacados"}>
                 Destacados
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href=" ">
-                Categoría #1
-              </a>
+              <NavLink className="nav-link" activeClassName="active" to={"/category/aventuras"}>
+                Aventuras
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href=" ">
-                Categoría #2
-              </a>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href=" "
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Categoría #3
-              </a>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href=" ">
-                  Subcategoría #1
-                </a>
-                <a className="dropdown-item" href=" ">
-                  Subcategoría #2
-                </a>
-                <a className="dropdown-item" href=" ">
-                  Subcategoría #3
-                </a>
-              </div>
+              <NavLink className="nav-link" activeClassName="active" to={"/category/ciudades"}>
+                Ciudades
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href=" ">
+              <NavLink className="nav-link" activeClassName="active" to={"/contacto"}>
                 Contacto
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

@@ -1,7 +1,8 @@
 import React from "react";
-import ItemCount from "../ItemListContainer/ItemCount";
+import { useParams } from "react-router-dom";
 
 const ItemDetail = ({ producto }) => {
+
   return (
     <div className="container text-left mt-5">
       <div className="heading-section">

@@ -5,6 +5,7 @@ import NavBarMenu from "./NavBarMenu";
 import SearchBar from "../UI/SearchBar";
 import SideBarMobileNav from "./SideBarMobileNav";
 import TopBar from "../TopBar/TopBar";
+import { Link } from "react-router-dom";
 
 function Navbar({agregarCarrito}) {
   return (
@@ -26,9 +27,9 @@ function Navbar({agregarCarrito}) {
             <i className="bx bx-menu icon-single"></i>
           </button>
 
-          <a className="navbar-brand" href=" ">
-            <h4 className="font-weight-bold">Logo</h4>
-          </a>
+          <Link className="navbar-brand" to={"/"}>
+            <h4 className="font-weight-bold">Tempo</h4>
+          </Link>
 
           <ul className="navbar-nav ml-auto d-block d-md-none">
             <li className="nav-item">
@@ -41,7 +42,7 @@ function Navbar({agregarCarrito}) {
               <input
                 className="form-control"
                 type="search"
-                placeholder="Buscar productos..."
+                placeholder="Busca tu próxima experiencia..."
                 aria-label="Search"
               />
               <button className="btn btn-success my-2 my-sm-0" type="submit">

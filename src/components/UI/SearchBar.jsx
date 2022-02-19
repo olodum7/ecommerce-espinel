@@ -10,7 +10,7 @@ const SearchBar = () => {
               <input
                 className="form-control"
                 type="search"
-                placeholder="Buscar productos..."
+                placeholder="Busca tu próxima experiencia..."
                 aria-label="Search"
               />
               <button className="btn btn-success" type="submit">
