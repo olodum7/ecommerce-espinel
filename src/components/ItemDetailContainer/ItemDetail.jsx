@@ -1,5 +1,6 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import ItemCount from "../ItemListContainer/ItemCount";
+
 
 const ItemDetail = ({ producto }) => {
 
@@ -26,6 +27,7 @@ const ItemDetail = ({ producto }) => {
               </div>
             </div>
             <p>{producto.extract}</p>
+            <ItemCount stock={7} initial={1} item={producto}/>
             <button className="btn btn-outline-primary mt-3 col-6">Agregar al carrito</button>
           </div>
         </div>

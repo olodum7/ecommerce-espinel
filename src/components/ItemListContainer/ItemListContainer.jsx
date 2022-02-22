@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 
-const ItemListContainer = ({ greetings, onAdd }) => {
+const ItemListContainer = ({ greetings }) => {
 
   const {id} = useParams();
 

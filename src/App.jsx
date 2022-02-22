@@ -1,12 +1,14 @@
 import "./App.css";
 import React from "react";
 import Rutas from "./routes";
+import CarritoProveedor from "./context/CarritoProveedor";
 
 function App() {
-
   return (
     <div className="App">
-      <Rutas/>
+      <CarritoProveedor>
+        <Rutas />
+      </CarritoProveedor>
     </div>
   );
 }
