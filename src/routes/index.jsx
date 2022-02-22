@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Cart from "../components/Cart/Cart";
 import Contacto from "../components/Contacto/Contacto";
 import Footer from "../components/Footer/Footer";
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
@@ -41,6 +42,7 @@ const Rutas = () => {
         />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
         <Route path="/contacto" element={<Contacto />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
       <Footer/>
     </BrowserRouter>

@@ -1,7 +1,6 @@
 import React from "react";
 import ItemCount from "../ItemListContainer/ItemCount";
 
-
 const ItemDetail = ({ producto }) => {
 
   return (
@@ -27,8 +26,11 @@ const ItemDetail = ({ producto }) => {
               </div>
             </div>
             <p>{producto.extract}</p>
+
+            <h6 className="mt-4 mb-3">Cantidad de personas:</h6>
+
             <ItemCount stock={7} initial={1} item={producto}/>
-            <button className="btn btn-outline-primary mt-3 col-6">Agregar al carrito</button>
+
           </div>
         </div>
       </div>
