@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { CarritoContext } from "../../context/CarritoProveedor";
+import { CarritoContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
 const ItemCount = ({ stock, initial, item }) => {
@@ -9,8 +9,9 @@ const ItemCount = ({ stock, initial, item }) => {
 
   const [agregar, setAgregar] = useState(false);
 
-  function onAdd(item) {
+  function onAdd(item, contador) {
     setAgregar(true);
+    item['cantidadPersonas'] = contador;
     agregarAlCarrito(item);
   }
 
@@ -49,7 +50,7 @@ const ItemCount = ({ stock, initial, item }) => {
               id="btnAgregarCarrito"
               className="btn btn-outline-primary mt-3 col"
               disabled={contador > stock && true}
-              onClick={() => onAdd(item)}
+              onClick={() => onAdd(item, contador)}
             >
               Agregar al carrito
             </button>

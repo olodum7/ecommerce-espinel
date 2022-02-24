@@ -1,5 +1,5 @@
 import React from "react";
-import CartWidget from "../UI/CartWidget";
+import CartWidget from "../Cart/CartWidget";
 import LogInButton from "../UI/LogInButton";
 import NavBarMenu from "./NavBarMenu";
 import SearchBar from "../UI/SearchBar";
@@ -7,7 +7,7 @@ import SideBarMobileNav from "./SideBarMobileNav";
 import TopBar from "../TopBar/TopBar";
 import { Link } from "react-router-dom";
 
-function Navbar({agregarCarrito}) {
+function Navbar() {
   return (
     <>
       <div className="overlay"></div>
@@ -33,7 +33,9 @@ function Navbar({agregarCarrito}) {
 
           <ul className="navbar-nav ml-auto d-block d-md-none">
             <li className="nav-item">
-              <CartWidget agregarCarrito={agregarCarrito}/>
+              
+                <CartWidget />
+
             </li>
           </ul>
 
@@ -52,7 +54,9 @@ function Navbar({agregarCarrito}) {
 
             <ul className="navbar-nav">
               <li className="nav-item">
-                <CartWidget agregarCarrito={agregarCarrito}/>
+
+                  <CartWidget />
+
               </li>
               <li className="nav-item ml-md-3">
                 <LogInButton />

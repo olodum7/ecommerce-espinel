@@ -112,10 +112,13 @@ const ItemDetailContainer = () => {
 
   const [productos, setProductos] = useState(null);
 
+  const [cargando, setCargando] = useState(true);
+
   useEffect(() => {
     const item = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(data[id-1]);
+        setCargando(false);
       }, 2000);
     });
 
@@ -129,7 +132,8 @@ const ItemDetailContainer = () => {
   }, []);
 
   return (
-    <>{productos && <ItemDetail key={productos.id} producto={productos} />}</>
+    <>{cargando && <h2 className='mt-5'>Cargando...</h2>}
+    {productos && <ItemDetail key={productos.id} producto={productos} />}</>
   );
 };
 

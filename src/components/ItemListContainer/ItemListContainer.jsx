@@ -84,10 +84,13 @@ const ItemListContainer = ({ greetings }) => {
 
   const [aventuras, setAventuras] = useState(null);
 
+  const [cargando, setCargando] = useState(true);
+
   useEffect(() => {
     const items = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(data);
+        setCargando(false);
       }, 2000);
     });
 
@@ -105,6 +108,7 @@ const ItemListContainer = ({ greetings }) => {
       <h3 className="mt-5">{greetings}</h3>
       <h6>{id ? 'Categoria ' : ''} {id}</h6>
       <div class="container mb-5">
+      {cargando && <h2 className='mt-5'>Cargando...</h2>}
         <ItemList items={aventuras} categoria={id}/>
       </div>
       
