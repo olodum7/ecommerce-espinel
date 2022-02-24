@@ -42,7 +42,7 @@ const Rutas = () => {
         />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
         <Route path="/contacto" element={<Contacto />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={<Cart />} /> 
       </Routes>
       <Footer/>
     </BrowserRouter>

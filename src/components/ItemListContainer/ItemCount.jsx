@@ -63,7 +63,7 @@ const ItemCount = ({ stock, initial, item }) => {
             to={"/cart"}
             className="btn btn-primary mt-3 col text-uppercase"
           >
-            Finalizar compra
+            Terminar mi compra
           </Link>
         </div>
       )}
