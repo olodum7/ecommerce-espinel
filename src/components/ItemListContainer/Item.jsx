@@ -10,11 +10,11 @@ const Item = ({ item }) => {
         </div>
         <figcaption>
           <span className="color-text">{item.title}</span>
-          <span className="place-name">{item.description}</span>
+          <span className="place-name">{item.subtitle}</span>
           <span className="price">$ {item.price}</span>
         </figcaption>
       </figure>
-      <Link to={`/item/${item.id}`} className="btn btn-default btn-primary">Ver más</Link>
+      <Link to={`/item/${item.key}`} className="btn btn-default btn-primary">Ver más</Link>
     </div>
   );
 };

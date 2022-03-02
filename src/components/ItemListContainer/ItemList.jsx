@@ -8,11 +8,11 @@ const ItemList = ({ items, categoria }) => {
     <div className="row mt-5">
       {items &&
         items
-          .filter((item) => item.categoria == categoria)
-          .map((item) => <Item key={item.id} item={item} />)}
+          .filter((item) => item.category == categoria)
+          .map((item) => <Item key={item.key} item={item} />)}
       {id == undefined &&
         items &&
-        items.map((item) => <Item key={item.id} item={item} />)}
+        items.map((item) => <Item key={item.key} item={item} />)}
     </div>
   );
 };

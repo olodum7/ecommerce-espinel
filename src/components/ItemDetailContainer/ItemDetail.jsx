@@ -29,7 +29,7 @@ const ItemDetail = ({ producto }) => {
 
             <h6 className="mt-4 mb-3">Cantidad de personas:</h6>
 
-            <ItemCount stock={7} initial={1} item={producto}/>
+            <ItemCount stock={producto.stock} initial={1} item={producto}/>
 
           </div>
         </div>
