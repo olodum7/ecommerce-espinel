@@ -11,7 +11,7 @@ const ItemCount = ({ stock, initial, item }) => {
 
   function onAdd(item, contador) {
     setAgregar(true);
-    item['cantidadPersonas'] = contador;
+    item["cantidadPersonas"] = contador;
     agregarAlCarrito(item);
   }
 
@@ -59,6 +59,9 @@ const ItemCount = ({ stock, initial, item }) => {
       )}
       {agregar && (
         <div className="col-md-6">
+          <Link to={"/"} className="btn btn-outline-info mt-3 col">
+            <i className="fa fa-angle-left"></i> Continuar comprando
+          </Link>
           <Link
             to={"/cart"}
             className="btn btn-primary mt-3 col text-uppercase"

@@ -9,10 +9,10 @@ const ItemList = ({ items, categoria }) => {
       {items &&
         items
           .filter((item) => item.category == categoria)
-          .map((item) => <Item key={item.key} item={item} />)}
+          .map((item) => <Item key={item.id} item={item} />)}
       {id == undefined &&
         items &&
-        items.map((item) => <Item key={item.key} item={item} />)}
+        items.map((item) => <Item key={item.id} item={item} />)}
     </div>
   );
 };

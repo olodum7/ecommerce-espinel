@@ -37,6 +37,10 @@
     }
 }
 
+#checkout {
+    min-height: 55vh;
+}
+
 
 /*Navbar*/
 
@@ -777,7 +781,7 @@ a.btn-mod {
 }
 
 .table th {
-    font-size: .85em;
+    font-size: .7em;
     font-weight: 600;
 }
 
@@ -820,4 +824,11 @@ a.btn-mod {
     table#cart tfoot td .btn {
         display: block;
     }
+}
+
+h6.checkout {
+    font-size: .7em;
+    font-weight: 600;
+    padding: .9rem;
+    border-bottom: 2px solid #dee2e6;
 }

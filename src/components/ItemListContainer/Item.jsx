@@ -14,7 +14,7 @@ const Item = ({ item }) => {
           <span className="price">$ {item.price}</span>
         </figcaption>
       </figure>
-      <Link to={`/item/${item.key}`} className="btn btn-default btn-primary">Ver más</Link>
+      <Link to={`/item/${item.id}`} className="btn btn-default btn-primary">Ver más</Link>
     </div>
   );
 };
