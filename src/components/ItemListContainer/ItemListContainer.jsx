@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import useFireStore from "../../hooks/useFireStore";
+import Carousel from "../Carousel/Carousel";
+import Loader from "../UI/Loader";
 
 const ItemListContainer = ({ greetings }) => {
   const { id } = useParams();
@@ -14,12 +16,15 @@ const ItemListContainer = ({ greetings }) => {
 
   return (
     <main>
-      <h3 className="mt-5">{greetings}</h3>
-      <h6>
-        {id ? "Categoria " : ""} {id}
-      </h6>
-      <div class="container mb-5">
-        {cargando && <h2 className="mt-5">Cargando...</h2>}
+      <Carousel />
+      <div className="container mb-5 main-container">
+        <div className="row justify-content-center saludo">
+          <div className="col-10 col-md-4">
+            <h3 className="mt-5">{greetings}</h3>
+          </div>
+        </div>
+
+        {cargando && <Loader />}
         <ItemList items={experiencias} categoria={id} />
       </div>
     </main>

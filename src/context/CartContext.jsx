@@ -31,6 +31,7 @@ const CartContext = ({ children }) => {
 
   const clear = () => {
     setCarrito([]);
+    setOrderID([]);
   };
 
   return (

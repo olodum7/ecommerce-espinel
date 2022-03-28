@@ -17,32 +17,34 @@ const Cart = () => {
         {orderID.length > 0 ? (
           <>
             <h2 className="mt-5">¡Muchas gracias por tu compra!</h2>
-            <h5 className="mt-3">
-              Tu número de orden de compra es:{" "}
-              <span
-                className="text-primary"
-                style={{ fontWeight: 300, display: "inline" }}
-              >
+
+            <div className="row">
+            <h5 className="mt-5 compra-hecha text-center">
+            Tu número de orden de compra es:
+            <span>
                 {orderID}
               </span>
             </h5>
-            <Link to={"/"} className="btn btn-outline-primary mt-4">
+
+          </div>
+
+            <Link to={"/"} className="btn compra-hecha-boton mt-5" onClick={clear}>
               <i className="fa fa-angle-left"></i> Volver a la tienda
             </Link>
           </>
         ) : (
           <>
-            <h3 className="mt-5 mb-5">Checkout</h3>
             {carrito.length > 0 ? (
               <>
+                <h3 className="mt-5 mb-5 checkout-titulo">Checkout</h3>
                 <div className="row">
-                  <div className="col-4 bg-default text-left">
+                  <div className="col-12 col-md-4 bg-default text-left">
                     <Checkout carrito={carrito} total={total} />
                   </div>
-                  <div className="col-8">
+                  <div className="col-12 col-md-8">
                     <table id="cart" className="table table-hover text-left">
                       <thead>
-                        <tr className="bg-warning text-dark">
+                        <tr className="cart-encabezado">
                           <th style={{ width: "38%" }}>Experiencia</th>
                           <th style={{ width: "10%" }}>Precio</th>
                           <th style={{ width: "25%" }}>Cantidad de personas</th>
@@ -61,13 +63,12 @@ const Cart = () => {
                         <tr>
                           <td style={{ width: "38%" }}>
                             <div
-                              class="btn-group"
+                              className="btn-group cart-botones-auxiliares"
                               role="group"
                               aria-label="Basic example"
                             >
                               <Link to={"/"} className="btn btn-outline-info">
-                                <i className="fa fa-angle-left"></i> Continuar
-                                comprando
+                               Continuar comprando
                               </Link>
                               <button
                                 className="btn btn-outline-secondary mx-2"
@@ -78,9 +79,9 @@ const Cart = () => {
                             </div>
                           </td>
                           <td></td>
-                          <td colspan="1" className="hidden-xs"></td>
-                          <td className="hidden-xs text-center">
-                            <strong>Total $ {total}</strong>
+                          <td></td>
+                          <td colspan="2" className="hidden-xs text-left cart-total">
+                            <strong>Total: $ {total}</strong>
                           </td>
                         </tr>
                       </tfoot>
@@ -90,8 +91,10 @@ const Cart = () => {
               </>
             ) : (
               <>
-                <h3>No tienes ninguna compra cargada</h3>
-                <Link to={"/"} className="btn btn-outline-primary mt-4">
+                <h3 className="mb-5 sin-compra">
+                  No tienes ninguna compra cargada
+                </h3>
+                <Link to={"/"} className="btn sin-compra-boton mt-4">
                   <i className="fa fa-angle-left"></i> Volver a la tienda
                 </Link>
               </>

@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+![logo](/public/yeeeah-logo.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+¡Experimentá experiencias únicas en destinos y ciudades de todo el mundo!
 
-## Available Scripts
+## Proyecto
 
-In the project directory, you can run:
+Este proyecto nade como ejercicio del curso de ReactJS brindado por [Coderhouse](https://www.coderhouse.com.uy/). Se trata de un e-Commerce de viajes y experiencias con foco en un público objetivo de entre 30-40 años.
 
-### `npm start`
+## Tecnologías
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Se utilizó Bootstrap 4 con framework de maquetado web, ReactJS para crear interfaces de usuario interactivas y Firebase como tecnología serverless para la base de datos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Estética
 
-### `npm test`
+En lo relativo a lo visual se prestó especial cuidado para lograr una experiencia de usuario atractiva, dinámica y en línea con el público objetivo pensado.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Funcionamiento
 
-### `npm run build`
+El prototipo es un producto mínimo viable que funciona mostrando diferentes actividades en formato tarjeta, con destacados y un menú para filtrar categorías. Cuenta con un carrito con la posibilidad de sumar productos seleccionado y hacer un checkout, a través de la carga de un formulario, generando una orden de compra registrada en Firebase.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Todo el contenido se cargar dinámica mediantes solicitudes a Firebase. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A nivel componentes se busco generar un orden y separación de responsabilidades. También se hace un uso extensivo de hooks y custom hooks.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[demo](https://yeaah.netlify.app/)

@@ -3,39 +3,20 @@ import { NavLink } from "react-router-dom";
 
 const NavBarMenu = () => {
   return (
-    <nav className="navbar navbar-expand-md navbar-light bg-light sub-menu">
-      <div className="container">
         <div className="collapse navbar-collapse" id="navbar">
-          <ul className="navbar-nav mx-auto">
+          <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to={"/"}>
-                Home <span className="sr-only">(current)</span>
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to={"/category/destacados"}>
-                Destacados
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to={"/category/aventuras"}>
+              <NavLink className={({ isActive }) => (isActive ? 'nav-link pl-0 nav-item-active' : 'nav-link pl-0')} to={"/category/aventuras"} >
                 Aventuras
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to={"/category/ciudades"}>
+              <NavLink className={({ isActive }) => (isActive ? 'nav-link pl-0 nav-item-active' : 'nav-link pl-0')} to={"/category/ciudades"}>
                 Ciudades
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to={"/contacto"}>
-                Contacto
               </NavLink>
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
   );
 };
 

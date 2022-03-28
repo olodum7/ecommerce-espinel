@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useFireStore from "../../hooks/useFireStore";
+import Loader from "../UI/Loader";
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
@@ -13,7 +14,7 @@ const ItemDetailContainer = () => {
   
   return (
     <>
-      {cargando ? <h2 className="mt-5">Cargando...</h2> : <ItemDetail key={individual.id} producto={individual} />}
+      {cargando ? <Loader/> : <ItemDetail key={individual.id} producto={individual} />}
     </>
   );
 };

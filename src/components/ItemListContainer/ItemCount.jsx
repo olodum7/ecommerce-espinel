@@ -15,60 +15,76 @@ const ItemCount = ({ stock, initial, item }) => {
     agregarAlCarrito(item);
   }
 
+  const handleChange = () => {
+    setContador(contador);
+  };
+
   return (
-    <div className="row">
+    <div className="container">
       {!agregar && (
         <>
-          <div className="input-group number-spinner col-md-6">
-            <span className="input-group-btn data-dwn">
+          <div className="row item-count-row align-items-center justify-content-center">
+            <h5 className="text-center">Cantidad de personas:</h5>
+            <div className="input-group item-count col-8 col-md-4 p-0">
+              <span className="input-group-btn">
+                <button
+                  className="btn btn-default"
+                  data-dir="dwn"
+                  onClick={() => setContador(contador - 1)}
+                  disabled={contador === 1 && true}
+                >
+                  <span className="bx bx-minus"></span>
+                </button>
+              </span>
+              <input
+                type="text"
+                className="form-control text-center"
+                value={contador}
+                onChange={handleChange}
+              />
+              <span className="input-group-btn">
+                <button
+                  className="btn btn-default"
+                  data-dir="up"
+                  onClick={() => setContador(contador + 1)}
+                  disabled={contador >= stock && true}
+                >
+                  <span className="bx bx-plus"></span>
+                </button>
+              </span>
+            </div>
+          </div>
+          <div className="row">
+            <div className="btn col-12 p-0">
               <button
-                className="btn btn-default btn-primary"
-                data-dir="dwn"
-                onClick={() => setContador(contador - 1)}
-                disabled={contador === 1 && true}
+                id="btnAgregarCarrito"
+                className="btn col"
+                disabled={contador > stock && true}
+                onClick={() => onAdd(item, contador)}
               >
-                <span className="bx bx-minus"></span>
+                Agregar al carrito
               </button>
-            </span>
-            <input
-              type="text"
-              className="form-control text-center"
-              value={contador}
-            />
-            <span className="input-group-btn data-up">
-              <button
-                className="btn btn-default btn-primary"
-                data-dir="up"
-                onClick={() => setContador(contador + 1)}
-                disabled={contador >= stock && true}
-              >
-                <span className="bx bx-plus"></span>
-              </button>
-            </span>
-
-            <button
-              id="btnAgregarCarrito"
-              className="btn btn-outline-primary mt-3 col"
-              disabled={contador > stock && true}
-              onClick={() => onAdd(item, contador)}
-            >
-              Agregar al carrito
-            </button>
+            </div>
           </div>
         </>
       )}
       {agregar && (
-        <div className="col-md-6">
-          <Link to={"/"} className="btn btn-outline-info mt-3 col">
-            <i className="fa fa-angle-left"></i> Continuar comprando
-          </Link>
-          <Link
-            to={"/cart"}
-            className="btn btn-primary mt-3 col text-uppercase"
-          >
-            Terminar mi compra
-          </Link>
-        </div>
+        <>
+          <div className="row">
+            <h5 className="mt-5 agregado-al-carrito text-center">
+              ¡Agregado correctamente!
+            </h5>
+          </div>
+
+          <div className="row btn-despues-agregado-carrito">
+            <Link to={"/"} className="btn col mb-4">
+              <i className="fa fa-angle-left"></i> Continuar comprando
+            </Link>
+            <Link to={"/cart"} className="btn col mb-4">
+              Terminar mi compra
+            </Link>
+          </div>
+        </>
       )}
     </div>
   );

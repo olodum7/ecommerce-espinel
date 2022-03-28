@@ -1,8 +1,6 @@
 import React from "react";
 import CartWidget from "../Cart/CartWidget";
-import LogInButton from "../UI/LogInButton";
 import NavBarMenu from "./NavBarMenu";
-import SearchBar from "../UI/SearchBar";
 import SideBarMobileNav from "./SideBarMobileNav";
 import TopBar from "../TopBar/TopBar";
 import { Link } from "react-router-dom";
@@ -15,60 +13,39 @@ function Navbar() {
       <TopBar />
 
       <nav
-        className="navbar navbar-expand-md navbar-light bg-light main-menu"
+        className="navbar navbar-expand-md navbar-light main-menu"
         style={{ boxShadow: "none" }}
       >
         <div className="container">
-          <button
-            type="button"
-            id="sidebarCollapse"
-            className="btn btn-link d-block d-md-none"
-          >
-            <i className="bx bx-menu icon-single"></i>
-          </button>
 
-          <Link className="navbar-brand" to={"/"}>
-            <h4 className="font-weight-bold">Tempo</h4>
-          </Link>
+            <button
+              type="button"
+              id="sidebarCollapse"
+              className="btn btn-link d-block d-md-none"
+            >
+              <i className="bx bx-menu icon-single"></i>
+            </button>
 
-          <ul className="navbar-nav ml-auto d-block d-md-none">
-            <li className="nav-item">
-              
-                <CartWidget />
-
-            </li>
-          </ul>
-
-          <div className="collapse navbar-collapse">
-            <form className="form-inline my-2 my-lg-0 mx-auto">
-              <input
-                className="form-control"
-                type="search"
-                placeholder="Busca tu próxima experiencia..."
-                aria-label="Search"
-              />
-              <button className="btn btn-success my-2 my-sm-0" type="submit">
-                <i className="bx bx-search"></i>
-              </button>
-            </form>
-
-            <ul className="navbar-nav">
-              <li className="nav-item">
-
+            <div className="col-md-4 pl-0">
+              <NavBarMenu />
+            </div>
+            <div className="col-10 offset-1 col-md-4 offset-md-0 align-self-center">
+              <Link className="navbar-brand" to={"/"}>
+                <div className="brand-logo">
+                  <img src="/yeeeah-logo.png" alt="Logo" className="img-fluid" />
+                </div>
+              </Link>
+            </div>
+            <div className="col-10 offset-1 col-md-4 d-flex flex-row-reverse">
+              <ul className="navbar-nav nav-auxiliar ml-auto d-block">
+                <li className="nav-item">
                   <CartWidget />
+                </li>
+              </ul>
+            </div>
 
-              </li>
-              <li className="nav-item ml-md-3">
-                <LogInButton />
-              </li>
-            </ul>
-          </div>
         </div>
       </nav>
-
-      <NavBarMenu />
-
-      <SearchBar />
 
       <SideBarMobileNav />
     </>

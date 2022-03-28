@@ -19,25 +19,17 @@ const CartItem = ({ item }) => {
         <div className="col-sm-8 d-flex align-items-center">
           <div className="description">
             <h5 className="nomargin">{item.title}</h5>
-            <p
-              style={{
-                fontSize: ".8em",
-                lineHeight: "1.35em",
-              }}
-            >
+            <p>
               {item.subtitle}
             </p>
           </div>
         </div>
       </div>
     </td>
-    <td data-th="Price">$ {item.price}</td>
-    <td data-th="Quantity">{item.cantidadPersonas}</td>
-    <td data-th="Subtotal" className="text-center">
+    <td data-th="Price" className="cart-precio">$ {item.price}</td>
+    <td data-th="Quantity" className="cart-personas">{item.cantidadPersonas}</td>
+    <td data-th="Subtotal" className="text-center cart-subtotal">
       $ {item.price * item.cantidadPersonas}
-      {/* <span style={{ display: "none" }}>
-        {(total += item.price * item.cantidadPersonas)}
-      </span> */}
     </td>
     <td className="actions" data-th="">
       <button
@@ -46,9 +38,6 @@ const CartItem = ({ item }) => {
       >
         <i
           className="bx bxs-trash-alt"
-          style={{
-            fontSize: ".8em",
-          }}
         ></i>
       </button>
     </td>

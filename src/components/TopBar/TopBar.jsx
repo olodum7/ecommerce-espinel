@@ -7,8 +7,7 @@ const TopBar = () => {
         <div className="row">
           <div className="col-12 col-md-6">
             <p className="small text-left">
-              <i className="bx bx-envelope"></i> hola@tempo.com |{" "}
-              <i className="bx bx-phone"></i> (+598) 099 000 000
+              hola@<strong>yeaah.com</strong>  |  (+598) 099 000 000
             </p>
           </div>
 

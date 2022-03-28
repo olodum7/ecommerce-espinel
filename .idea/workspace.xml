@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4ab5a29-448d-4d6c-b802-3e0b4f3323ae" name="Changes" comment="" />
+    <list default="true" id="d4ab5a29-448d-4d6c-b802-3e0b4f3323ae" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Cart/CartItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/CartItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ItemListContainer/Item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ItemListContainer/Item.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ItemListContainer/ItemList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ItemListContainer/ItemList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ItemListContainer/ItemListContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ItemListContainer/ItemListContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/NavBarMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/NavBarMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/SideBarMobileNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/SideBarMobileNav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopBar/TopBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopBar/TopBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="25Lh74r2mr7NEu5kJ7HhTU8eaXh" />
   <component name="PropertiesComponent">

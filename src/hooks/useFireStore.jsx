@@ -8,6 +8,7 @@ const useFireStore = () => {
   const [experiencias, setExperiencias] = useState([]);
   const [cargando, setCargando] = useState(false);
   const [individual, setIndividual] = useState({});
+  const [proximamente, setProximamente] = useState([]);
 
   const { setOrderID } = useContext(CarritoContext);
 
@@ -27,6 +28,20 @@ const useFireStore = () => {
       setCargando(false);
     }
   };
+
+    // Obteniendo coming soon
+    const getComingSoon = async () => {
+      try {
+        const data = collection(db, "comingsoon");
+        const col = await getDocs(data);
+        const result = col.docs.map(
+          (doc) => (doc = { id: doc.id, ...doc.data() })
+        );
+        setProximamente(result);
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
   // Obteniendo experiencia individual
   const getIndividualData = async ({ id }) => {
@@ -73,9 +88,11 @@ const useFireStore = () => {
     getIndividualData,
     generateOrder,
     actualizarStock,
+    getComingSoon,
     cargando,
     individual,
     experiencias,
+    proximamente,
   };
 };
 

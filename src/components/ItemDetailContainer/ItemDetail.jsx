@@ -1,85 +1,37 @@
 import React from "react";
 import ItemCount from "../ItemListContainer/ItemCount";
+import PageNotFound from "../UI/PageNotFound";
 
 const ItemDetail = ({ producto }) => {
-
   return (
-    <div className="container text-left mt-5">
-      <div className="heading-section">
-        <h2>Detalles</h2>
-      </div>
-      <div className="row">
-        <div className="col-md-6">
-          <div id="slider" className="owl-carousel product-slider">
-            <div className="item" style={{ height: "550px", overflow: "hidden" }}>
-              <img src={producto.pictureURL} className="img-fluid" />
+    <div className="container-fluid text-left">
+      {producto.title === undefined ? (
+        <PageNotFound error='Experiencia'/>
+      ) : (
+        <>
+          <div className="row">
+            <div
+              className="col-12 col-md-5 product-image"
+              style={{
+                background: `url(${producto.pictureURL}) no-repeat center / cover`,
+              }}
+            >
             </div>
-          </div>
-        </div>
-        <div className="col-md-6">
-          <div className="product-dtl mt-5">
-            <div className="product-info">
-              <div className="color-text">{producto.title}</div>
-              <h3>{producto.subtitle}</h3>
-              <div className="product-price-discount">
-                <span>$ {producto.price}</span>
+            <div className="col-10 col-md-5 offset-md-1 product-info">
+              <div>
+                <h1>{producto.title}</h1>
+                <h3>{producto.subtitle}</h3>
+                <p>{producto.extract}</p>
+                <div className="product-price">
+                  <span>$ {producto.price}</span>
+                </div>
+
+                <ItemCount stock={producto.stock} initial={1} item={producto} />
               </div>
             </div>
-            <p>{producto.extract}</p>
-
-            <h6 className="mt-4 mb-3">Cantidad de personas:</h6>
-
-            <ItemCount stock={producto.stock} initial={1} item={producto}/>
-
           </div>
-        </div>
-      </div>
-      <div className="product-info-tabs">
-        <ul className="nav nav-tabs" id="myTab" role="tablist">
-          <li className="nav-item">
-            <a
-              className="nav-link active"
-              id="description-tab"
-              data-toggle="tab"
-              href="#description"
-              role="tab"
-              aria-controls="description"
-              aria-selected="true"
-            >
-              Description
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              className="nav-link"
-              id="review-tab"
-              data-toggle="tab"
-              href="#review"
-              role="tab"
-              aria-controls="review"
-              aria-selected="false"
-            >
-              Reviews (0)
-            </a>
-          </li>
-        </ul>
-        <div className="tab-content" id="myTabContent">
-          <div
-            className="tab-pane fade show active"
-            id="description"
-            role="tabpanel"
-            aria-labelledby="description-tab"
-          >
-            {producto.description}
-          </div>
-          <div
-            className="tab-pane fade"
-            id="review"
-            role="tabpanel"
-            aria-labelledby="review-tab"
-          ></div>
-        </div>
-      </div>
+        </>
+      )}
     </div>
   );
 };

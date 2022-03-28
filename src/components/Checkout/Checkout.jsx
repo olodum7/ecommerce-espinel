@@ -15,7 +15,7 @@ const Checkout = ({ carrito, total }) => {
     date: new Date().toLocaleString(),
     total: total,
   });
-
+  
   const handleChange = (e) => {
 
     // Filtrado de keys de compra
@@ -43,11 +43,12 @@ const Checkout = ({ carrito, total }) => {
     generateOrder({ datos: form });
 
     clear();
+
   };
 
   return (
     <>
-      <h6 className="checkout bg-warning text-dark">Datos</h6>
+      <h6 className="checkout">Datos</h6>
 
       <form className="mt-4" onSubmit={handleSubmit}>
         <div className="form-group">
@@ -95,9 +96,8 @@ const Checkout = ({ carrito, total }) => {
           <div className="invalid-feedback">*Un teléfono es requerido.</div>
         </div>
 
-        <hr className="mb-4" />
 
-        <button className="btn btn-primary bt-lg btn-block" type="submit">
+        <button className="btn bt-lg btn-block mt-5 mb-5 checkout-button" type="submit" disabled={!form.buyer.name || !form.buyer.email || !form.buyer.phone} >
           Comprar
         </button>
       </form>
